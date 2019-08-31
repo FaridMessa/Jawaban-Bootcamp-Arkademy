@@ -1,0 +1,47 @@
+function is_username_valid(username) {
+  // huruf keci a sampai z
+  var lowercaseRe = /^[a-z]/i;
+  
+  // huruf besar A sampai Z
+  var uppercaseRe = /^[A-Z]/i;
+
+  // angka dari 5 sampai 9
+  var numberRe = /[5-9]/g;
+  
+  // pengecekekan juka username yg di inout memiliki semua kombinasi yg ada
+	if(username.length == 9 && lowercaseRe.test(username)
+     && uppercaseRe.test(username)
+     && numberRe.test(username)) {
+    	return true;
+    }
+    return false;
+}
+
+function is_password_valid(password) {
+  // huruf keci a sampai z
+  var lowercaseRe = /[a-z]/g;
+  
+  // huruf besar A sampai Z
+  var uppercaseRe = /[A-Z]{1}/g;
+
+  // angka dari 0 ampai 9
+  var numberRe = /[0-9]{1}/g;
+
+  // karater unik _@#$ atau %
+  var specialRe = /=/;
+  
+  if(password.length == 8
+     && lowercaseRe.test(password)
+     && uppercaseRe.test(password)
+     && numberRe.test(password)
+	 && specialRe.test(password)) {
+     return true;
+  }
+
+  return false;
+}
+
+console.log(is_username_valid('Xrutaf888') ? 'true' : 'false'); // true
+console.log(is_username_valid('1Diana') ? 'true' : 'false'); // false
+console.log(is_password_valid('pasW0rd=') ? 'true' : 'false'); // true
+console.log(is_password_valid('C0d3YourFuture!#') ? 'true' : 'false'); // false
