@@ -1,3 +1,3 @@
 Kegunaan JSON pada REST API.
 
-JSON adalah hasil dari generate Rest API
+kegunaan JSON dari web API yaitu sebagai format untuk mentransmisikan (mengirim dan menerima) data dari web API (server) ke client atau sebaliknya.
