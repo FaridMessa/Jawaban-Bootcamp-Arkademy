@@ -1,0 +1,55 @@
+function getProfile(){
+    return {
+        "name" : "Muhammad Farid Messa",
+        "age" : 19,
+        "hobbies" : [
+            "watching movies",
+            "listening to music",
+            "coding",
+            "gaming",
+            "read comics"
+        ],
+        "is_married" : false,
+        "list_school" : [
+            {
+                "name" : "SD Klieng Cot Aron Aceh Besar",
+                "year_in" : "2006",
+                "year_out" : "2012",
+                "major": null
+            },
+            {
+                "name": "SMP N 18 Banda Aceh",
+                "year_in": "2012",
+                "year_out": "2015",
+                "major": null
+            },
+            {
+                "name": "SMK Negri 5 Telkom Banda Aceh",
+                "year_in": "2015",
+                "year_out": "2018",
+                "major" : null
+            }
+        ],
+        "skills" : [
+            {
+                "skil_name": "Web Design",
+                "level": "Advanced"
+            },
+            {
+                "skil_name": "Wep Programinng",
+                "level": "Advanced"
+            }
+        ] ,
+        "interest_in_coding" : true
+    }
+}
+
+// code to run the code above
+
+let profile = getProfile();
+
+// es6
+let { list_school } = profile;
+
+// print json yang telah di convert ke type String
+console.log(JSON.stringify(list_school));
